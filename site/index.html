@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- <meta name="viewport" content="width=device-width"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Instituto Arvore da Vida</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+
+</head>
+<!-- menu do site -->
+
+<body>
+  <header>
+    <div class="container-menu">
+      <h1>
+        <a href="#home"><img src="./imagens/logo2.jpg" , class="Imagemlogo"></a>
+      </h1>
+      <button class="menu-toggle" aria-label="Abrir menu">☰</button> <!-- btn 'burguer' recursivadade -->
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#projetos">Nossos Projetos</a></li>
+          <li><a href="#doe">Doe</a></li>
+          <li><a href="#voluntariando">Voluntariando</a></li>
+          <li><a href="#eventos">Eventos</a></li>
+          <li><a href="#sobre-nos">Sobre Nós</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- espaçamento entre menu e home -->
+  <div class="espaco-menu"> </div>
+
+  <!-- recursividade menu -->
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('nav ul');
+
+    menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
+
+  <!-- sessão home -->
+  <section id="home" class="fundo-azul sessao">
+    <div class="container container-inicial">
+
+      <!-- div grid textos e botoes -->
+      <div class="titulo-inicial">
+        <h1>Transformando Vidas, Criando Oportunidades</h1>
+        <p>Nosso compromisso é promover o desenvolvimento integral das crianças e adolescentes da comunidade Dandara,
+          garantindo seus direitos fundamentais e construindo um futuro com mais esperança e oportunidades.</p>
+
+        <div class="botoes">
+          <a href="#doe" class="botao">Faça sua Doação</a>
+          <a href="#voluntariando" class="botao">Voluntariando</a>
+          <a href="#projetos" class="botao">Nossos Projetos</a>
+        </div>
+      </div>
+
+      <!-- div grid imagem -->
+      <div class="img-inicial">
+        <img src="./imagens/home1.jpeg" , class="img-inicial">
+      </div>
+    </div>
+  </section>
+
+  <!-- sessao projetos -->
+  <section id="projetos" class="fundo-branco sessao">
+    <div class="container container-texto-projetos">
+      <h2>Conheça nossos projetos:</h2>
+      <p>O propósito do Instituto é assegurar os direitos fundamentais dessas crianças e adolescentes, garantindo acesso
+        à educação, alimentação, lazer, saúde emocional e física, proteção, afeto, e ao desenvolvimento pleno — físico,
+        mental, moral, espiritual e social. Acreditamos que, ao garantir esses direitos, estamos contribuindo para a
+        transformação da realidade de cada criança e adolescente, criando melhores expectativas de futuro para todos</p>
+    </div>
+
+    <!-- div para grid -->
+    <div class="grid-projeto container">
+
+      <div class="img-projetos">
+        <p>Educação e Reforço Escolar:</p>
+        <a href="reforco.html"><img src="./imagens/aula.jpg"></a>
+      </div>
+
+      <div class="img-projetos">
+        <p>Vínculos Afetivos:</p>
+        <a href="afeto.html"><img src="./imagens/vinculo.jpg"></a>
+      </div>
+
+      <div class="img-projetos">
+        <p>Mercadinho:</p>
+        <a href="mercadinho.html"><img src="./imagens/mercadinho.jpg"></a>
+      </div>
+
+      <div class="img-projetos">
+        <p>Ballet:</p>
+        <a href="ballet.html"><img src="./imagens/ballet.jpg"></a>
+      </div>
+
+      <div class="img-projetos">
+        <p>Autoconhecimento e Bíblia:</p>
+        <a href="autoconhecimento.html"><img src="./imagens/autoconhecimento.jpg"></a>
+      </div>
+
+      <div class="img-projetos">
+        <p>Biblioteca:</p>
+        <a href="biblioteca.html"><img src="./imagens/livro.jpg"></a>
+      </div>
+    </div>
+
+    <!-- div p/ formulario -->
+    <div id="form-projetos" class="container projeto-form fundo-azul-claro">
+      <fieldset class="form-grid">
+        <legend class="espaco-form"> Inscreva-se na lista de espera!</legend>
+        <!-- nome do responsavel -->
+        <div class="form-grupo">
+          <label for="responsavel">Nome do Responsável:</label>
+          <input type="text" name="responsavel" id="nome_responsavel" placeholder="Ex: Maria Silva" required>
+        </div>
+
+        <!-- nome do responsavel -->
+        <div class="form-grupo">
+          <label for="crianca">Nome da Criança/Adolescente:</label>
+          <input type="text" name="crianca" id="nome_crianca" placeholder="Ex: João Silva" required>
+        </div>
+
+        <!-- idade da criança/adolescente -->
+        <div class="form-grupo">
+          <label for="idade">Idade da Criança/Adolescente:</label>
+          <input type="number" name="idade" id="idade_jovem" placeholder="Ex: 10" required>
+        </div>
+
+        <!-- telefone para contato -->
+        <div class="form-grupo">
+          <label for="tel">Telefone para Contato:</label>
+          <input type="number" name="tel" id="tel_contato" placeholder="(31) 91234-5678" required>
+        </div>
+
+        <!-- endereço completo -->
+        <div class="form-grupo">
+          <label for="endereco">Endereço:</label>
+          <input type="text" name="endereco" id="endereco_residencia" placeholder="EX: Rua A, 1 - Dandara">
+        </div>
+
+        <!-- projeto de interesse -->
+        <div class="form-grupo">
+          <label for="projeto">Projeto de Interesse:</label>
+          <input type="text" name="projeto" id="interesse_projeto" placeholder="Ex: Reforço Escolar" required>
+        </div>
+
+        <!-- Checkbox para consentimento -->
+        <div>
+          <input type="checkbox" id="consentimento_doacao" name="consentimento_doacao" required>
+          <label for="consentimento_doacao">Autorizo a participação da criança/adolescente e o contato para informações
+            sobre o
+            projeto.</label>
+        </div>
+
+        <div class="form-grupo">
+          <button type="submit">Enviar</button>
+        </div>
+
+      </fieldset>
+    </div>
+
+  </section>
+
+  <!-- sessao doação -->
+  <section id="doe" class="fundo-azul sessao">
+    <!-- div para texto -->
+    <div class="container container-texto-doacao">
+      <h2>Sua doação transforma vidas</h2>
+      <p>A sua doação é essencial para que possamos continuar a garantir os direitos fundamentais das crianças e
+        adolescentes da comunidade Dandara. Com recursos limitados e uma crescente lista de espera, o apoio financeiro é
+        vital para expandir nossos serviços, oferecer educação, acompanhamento emocional e suporte às famílias. Cada
+        contribuição nos ajuda a acolher mais crianças, proporcionando a elas um desenvolvimento integral e uma nova
+        perspectiva de futuro. Juntos, podemos transformar realidades e construir uma comunidade mais justa e solidária.
+      </p>
+    </div>
+
+    <!-- div para grid (pix, transferencia, doação) -->
+    <div class="grid-doe container">
+      <div class="pix">
+        <h3>Pix QrCode:</h3>
+        <img src="./imagens/qrcode.png">
+        <p>
+          Chave: 49 103544/0001-78 <br>
+          Nome: Instituto Árvore da vida; <br>
+          Banco: Itaú <br>
+        </p>
+      </div>
+
+      <div class="banco">
+        <h3> Transferência Bancaria:</h3>
+        <ul>
+          <li>Banco: Itaú (341)</li>
+          <li>Agência: 6633</li>
+          <li>Conta Corrente: 99559-9</li>
+          <li>Instituto Árvore da vida</li>
+          <li>CNPJ 49.103.544/0001-78</li>
+        </ul>
+      </div>
+
+      <div class="doe-itens">
+        <h3>Doação de itens:</h3>
+        <ul>
+          <li>Materiais Escolares;</li>
+          <li>Livros;</li>
+          <li>Alimentos;</li>
+          <li>Roupas;</li>
+          <li>Brinquedos.</li>
+          <p>Local de Doação:</p>
+          <li>Avenida Dandara, 50</li>
+          <li>Bairro: Trevo</li>
+          <li>Segunda à Sexta</li>
+          <li>De 10 às 14hrs</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- sessao para voluntarios -->
+  <section id="voluntariando" class="fundo-branco sessao">
+
+    <div class="container titulo-voluntariando">
+      <h2>Seja um Voluntário</h2>
+    </div>
+
+    <div class="container container-voluntariando">
+      <div class="texto-voluntariando">
+        <h3>Doe tempo e amor!</h3>
+        <p>No Instituto Árvore da Vida, cada voluntário desempenha um papel essencial na construção de um futuro melhor
+          para as crianças e adolescentes. Sua dedicação e tempo têm o poder de transformar realidades e proporcionar
+          novas oportunidades. Junte-se a nós e faça a diferença!</p>
+        <h4>Onde você pode ajudar:</h4>
+
+        <ul>
+          <li>Ensino e Reforço Escolar: Voluntários para ajudar com lições de casa, tutoria individual, ou mesmo em
+            áreas específicas como matemática ou leitura;</li>
+          <li>Acompanhamento Psicológico: Para profissionais da área de saúde que possam dar suporte emocional às
+            crianças;</li>
+          <li>Atividades Extracurriculares: Ballet, teatro, informática, esportes, ou qualquer atividade que promova o
+            desenvolvimento pessoal e social das crianças;</li>
+          <li>Apoio Logístico: Ajuda com organização de eventos, captação de doações, administração de recursos, etc;
+          </li>
+          <li>Entre Outras Formas de Ajudar: Tem alguma habilidade específica ou uma ideia de como você gostaria de
+            contribuir? Queremos ouvir de você! Mesmo que sua área de interesse não esteja listada aqui, sua ajuda é
+            sempre bem-vinda. Entre em contato conosco e descubra outras maneiras de fazer a diferença.</li>
+        </ul>
+
+        <h5>Gostaria de ser um voluntário do Instituto?</h5>
+
+        <!-- formulario para voluntarios -->
+        <div class="container formulario-base fundo-azul-claro">
+          <fieldset class="fildset-formulario">
+            <legend class="espaco-form">Inscreva-se e Faça Parte do Nosso Time de Voluntários:</legend>
+            <div class="componente-formulario">
+              <label for="nome_voluntario">Nome:</label>
+              <input type="text" name="nome_voluntario" id="nome_voluntario" placeholder="Ex: Pedro Alves" required>
+            </div>
+
+            <div class="componente-formulario">
+              <label for="tel_voluntario">Número para contato:</label>
+              <input type="number" name="tel_voluntario" id="telefone_voluntario" placeholder="Ex: (31) 912345678"
+                required>
+            </div>
+
+            <div class="componente-formulario">
+              <label for="habilidade">Como poderia ajudar?:</label>
+              <input type="text" name="habilidade" id="habilidade_voluntario" placeholder="Ex: Ensino" required>
+            </div>
+
+            <div class="componente-formulario">
+              <label for="mensagem">Mensagem ou Comentário:</label>
+              <textarea id="mensagem" name="mensagem" rows="4" cols="50"
+                placeholder="Deixe sua mensagem ou comentário aqui..."></textarea>
+            </div>
+
+            <div>
+              <input type="checkbox" id="consentimento_vol" name="consentimento_vol" required>
+              <label for="consentimento_vol">Autorizo a instituição a entrar em contato para assuntos relacionados ao
+                voluntariado.</label>
+            </div>
+
+            <div class="componente-formulario">
+              <button type="submit">Enviar</button>
+            </div>
+
+          </fieldset>
+        </div>
+      </div>
+
+      <div class="img-voluntario">
+        <img src="./imagens/rosto.jpg">
+        <img src="./imagens/apresentacao.jpg">
+        <img src="./imagens/pipoca.jpg">
+      </div>
+    </div>
+
+  </section>
+
+  <div id=eventos class="fundo-azul-marinho titulo-eventos">
+    <h2>Próximos Eventos</h2>
+  </div>
+
+  <section class="fundo-branco container">
+    <h3 class="subtitulo-eventos">Participe dos nossos eventos e ajude a promover nossas ações em prol das crianças e
+      adolescentes. Confira abaixo os eventos programados e inscreva-se!</h3>
+    <div class="container eventos">
+
+      <div class="eventos-img">
+        <img src="./imagens/visao.heic">
+      </div>
+      <div class="eventos-texto">
+        <h4>Saúde Ocular</h4>
+        <p>Em parceria com o Projeto Visão em Foco, ofereceremos exames oftalmológicos gratuitos para a população do
+          bairro Dandara. Essa iniciativa visa promover a saúde ocular e garantir que todos tenham acesso a cuidados
+          essenciais para uma boa visão.</p>
+        <p>O evento será realizado no dia 27/08/2024, no Instituto Árvore da Vida, das 9h às 16h. Participe e cuide da
+          sua visão!</p>
+      </div>
+
+
+      <div class="eventos-img">
+        <img src="./imagens/bazar.png">
+      </div>
+      <div class="eventos-texto">
+        <h4>Bazar Beneficente</h4>
+        <p>Participe do nosso bazar beneficente em apoio às crianças e adolescentes do Instituto Árvore da Vida. Esta é
+          uma excelente oportunidade para contribuir com a nossa causa e adquirir produtos com valores acessíveis.</p>
+        <p>O evento será realizado no dia 13/08/2024, das 9h às 16h, no Instituto Árvore da Vida. Venha colaborar e
+          fazer a diferença!</p>
+      </div>
+
+
+      <div class="eventos-img">
+        <img src="./imagens/maes.heic">
+      </div>
+      <div class="eventos-texto">
+        <h4>Dia Especial com as Mães</h4>
+        <p>No evento, mães e crianças terão a oportunidade de desfrutar juntos de atividades especiais. Teremos rodas de
+          conversa, oficinas de artesanato e dinâmicas voltadas ao fortalecimento dos laços familiares, proporcionando
+          momentos de descontração e convivência.</p>
+        <p>O evento será realizado no dia 15/09/2024, das 9h às 13h, no Instituto Árvore da Vida.</p>
+      </div>
+
+    </div>
+
+    <!-- formulario para evento -->
+    <div class="container formulario-base fundo-azul-claro">
+      <fieldset class="fildset-formulario">
+        <legend class="espaco-form">Inscreva-se e participe dos nossos eventos!</legend>
+        <div class="componente-formulario">
+          <label for="nome_evento">Nome:</label>
+          <input type="text" name="nome_evento" id="nome_evento" placeholder="Ex: Luiza Silva" required">
+        </div>
+
+        <div class="componente-formulario">
+          <label for="tel_evento">Número para contato:</label>
+          <input type="number" name="tel_evento" id="telefone_evento" placeholder="Ex: (31) 912345678" required">
+        </div>
+
+        <div class="componente-formulario">
+          <label for="qual_evento">Qual evento gostaria de se inscrever?</label>
+          <input type="text" name="qual_evento" id="qual_evento" placeholder="Ex: Bazar Beneficente" required">
+        </div>
+
+        <div class="componente-escolha-form-evento">
+          <label>Gostaria de comparecer como:</label>
+          <div>
+            <input type="radio" id="participante" name="tipo_participacao" value="participante" required>
+            <label for="participante">Participante</label>
+          </div>
+          <div>
+            <input type="radio" id="voluntario" name="tipo_participacao" value="voluntario" required>
+            <label for="voluntario">Voluntário</label>
+          </div>
+        </div>
+
+        <div>
+          <input type="checkbox" id="consentimento_evento" name="consentimento-evento" required>
+          <label for="consentimento-evento">Autorizo a instituição a entrar em contato para assuntos relacionados ao
+            voluntariado.</label>
+        </div>
+
+        <div class="componente-formulario">
+          <button type="submit">Enviar</button>
+        </div>
+
+      </fieldset>
+    </div>
+
+  </section>
+
+  <section id="sobre-nos" class="fundo-azul sessao">
+    <div class="container sobre-nos">
+      <h3>Sobre Nós</h3>
+      <h4>QUEM SOMOS</h4>
+      <p>Somos uma instituição sem fins lucrativos que visa dar assistência educacional às crianças e adolescentes da
+        comunidade Dandara. Atualmente, oferecemos aulas de alfabetização, reforço escolar, educação emocional e ballet.
+      </p>
+      <h4>NOSSA HISTÓRIA</h4>
+      <p>Após um ano e meio de trabalho voluntário na região, Cândida e alguns amigos tiveram a oportunidade de conhecer
+        de perto a realidade das crianças e adolescentes da comunidade Dandara. Eles identificaram um grande déficit
+        educacional, com muitas crianças e adolescentes, entre 9 e 14 anos, ainda sem saber ler ou escrever. Diante
+        dessa situação, Cândida, com a ajuda dos amigos e o patrocínio do depósito do Francisco, fundou o Instituto
+        Árvore da Vida. O propósito do instituto é assegurar os direitos fundamentais dessas crianças e adolescentes,
+        garantindo acesso à educação, alimentação, lazer, saúde emocional e física, proteção, afeto, e ao
+        desenvolvimento pleno — físico, mental, moral, espiritual e social. Acreditamos que, ao garantir esses direitos,
+        estamos contribuindo para a transformação da realidade de cada criança e adolescente, criando melhores
+        expectativas de futuro para todos.</p>
+      <h4>NOSSA MISSÃO</h4>
+      <p>Nosso compromisso é garantir os direitos fundamentais das crianças e adolescentes da comunidade Dandara,
+        promovendo seu desenvolvimento integral e oferecendo uma formação sólida e equilibrada. Visamos transformar suas
+        realidades e construir um futuro com mais oportunidades e qualidade de vida.</p>
+      <h4>NOSSOS OBJETIVOS</h4>
+      <p>As atividades devem contribuir para que as crianças e adolescentes sejam capazes de:</p>
+      <ul>
+        <li>Atuar de forma autônoma em suas atividades habituais, adquirindo segurança afetiva e emocional e
+          desenvolvendo suas capacidades de iniciativa e confiança em si mesmos;</li>
+        <li>Estabelecer vínculos com adultos e com seus pares, respondendo aos sentimentos de afeto, respeitando a
+          diversidade e desenvolvendo atitudes de ajuda e colaboração;</li>
+        <li>Conquistar autoconhecimento e sabedoria divina baseados em princípios bíblicos;</li>
+        <li>Desenvolver competências socioemocionais;</li>
+        <li>Assegurar um espaço de referência para o convívio comunitário e social;</li>
+        <li>Desenvolver relações de afetividade, solidariedade e respeito mútuo;</li>
+        <li>Estimular a leitura crítica do mundo para a participação cidadã;</li>
+        <li>Oferecer transformação social a partir de aulas de reforço e cursos de informática, educação financeira e
+          emocional, oficina de teatro e dança, entre outros.</li>
+      </ul>
+      <h4>PRINCÍPIOS QUE NOS REGEM</h4>
+      <p>O Instituto Árvore da Vida tem como fundamento os princípios e valores cristãos, dentre os quais destacamos:
+      </p>
+      <ul>
+        <li>O Caráter</li>
+        <li>O Autogoverno</li>
+        <li>A Mordomia</li>
+        <li>A Individualidade</li>
+        <li>A Semeadura e Colheita</li>
+        <li>A Aliança</li>
+        <li>A Soberania</li>
+      </ul>
+    </div>
+
+    <div class="container sobre-nos-grid">
+      <div><img src="./imagens/sorriso.jpeg"></div>
+      <div><img src="./imagens/cozinha.jpeg"></div>
+      <div><img src="./imagens/x.heic"></div>
+    </div>
+  </section>
+
+  <section id="contato" class="sessao">
+    <div class="container contato">
+      <h3>Entre em Contato Conosco</h2>
+        <p>Tem alguma dúvida ou gostaria de falar conosco? Preencha o formulário abaixo ou entre em contato diretamente
+          por telefone ou e-mail.</p>
+
+        <div class="contato-grid">
+          <!-- formulario para contato -->
+          <div class="container formulario-base fundo-azul-claro">
+            <fieldset class="fildset-formulario">
+              <div class="componente-formulario">
+                <label for="nome_contato">Nome:</label>
+                <input type="text" name="nome_contato" id="nome_contato" placeholder="Ex: Ana Cristina" required">
+              </div>
+
+              <div class="componente-formulario">
+                <label for="tel_contato">Número para contato:</label>
+                <input type="number" name="tel_contato" id="telefone_contato" placeholder="Ex: (31) 912345678"
+                  required>
+              </div>
+
+
+              <div class="componente-formulario">
+                <label for="mensagem_contato">Mensagem ou Comentário:</label>
+                <textarea id="mensagem_contato" name="mensagem_contato" rows="4" cols="50"
+                  placeholder="Deixe sua mensagem ou comentário aqui..."></textarea>
+              </div>
+
+              <div>
+                <input type="checkbox" id="consentimento_contato" name="consentimento_contato" required>
+                <label for="consentimento_contato">Autorizo a instituição a entrar em contato para assuntos relacionados
+                  ao
+                  voluntariado.</label>
+              </div>
+
+              <div class="componente-formulario">
+                <button type="submit">Enviar</button>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="contato-texto">
+            <h4>Informações de Contato</h4>
+            <p><strong>Telefone:</strong> (31) 3110-6375</p>
+            <p><strong>E-mail:</strong> institutoarvoredavida.edu@gmail.com</p>
+            <p><strong>Endereço:</strong> Avenida Dandara, 50 - Bairro Trevo, CEP: 31370-651</p>
+            <iframe class="endereco-maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1458.8855956578627!2d-44.012531708433!3d-19.824566224422444!2m3!1f90!2f0!3f0!3m2!1i1024!2i768!4f35!3m3!1m2!1s0xa691f262472727%3A0xfdc333399410dda3!2sAv.%20Dandara%2C%2050%20-%20Trevo%2C%20Belo%20Horizonte%20-%20MG%2C%2031370-651!5e1!3m2!1spt-BR!2sbr!4v1727871511216!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <h4>Nos Siga nas Redes Sociais</h4>
+            <a href="https://www.instagram.com/institutoarvoredavida/" target="_blank">Instagram</a>
+          </div>
+
+        </div>
+    </div>
+  </section>
+
+  <footer id="footer" class="fundo-branco footer">
+    <a href="https://www.instagram.com/institutoarvoredavida/" target="_blank"><img src="./imagens/instagram.jpg"></a>
+    <a href="mailto:institutoarvoredavida.edu@gmail.com" target="_blank"><img src="./imagens/email.png"></a>
+    <a href="https://maps.app.goo.gl/73rzstDsTsHuENDV7" target="_blank"><img src="./imagens/maps.png"></a>
+    <p><a target="_blank" href="https://github.com/anacristinags">Feito com carinho por Ana Cristina <span
+          class="coracao">❤</span></a></p>
+  </footer>
+
+</body>
+
+</html>

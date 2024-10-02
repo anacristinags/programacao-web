@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header>
+    <div class="container-menu">
+      <h1>
+        <a href="index.html#home"><img src="./imagens/logo2.jpg" , class="Imagemlogo"></a>
+      </h1>
+      <button class="menu-toggle" aria-label="Abrir menu">☰</button> <!-- btn 'burguer' recursivadade -->
+      <nav>
+        <ul>
+          <li><a href="index.html#home"">Home</a></li>
+          <li><a href=" index.html#projetos">Nossos Projetos</a></li>
+          <li><a href="index.html#doe">Doe</a></li>
+          <li><a href="index.html#voluntariando">Voluntariando</a></li>
+          <li><a href="index.html#eventos">Eventos</a></li>
+          <li><a href="index.html#sobre-nos">Sobre Nós</a></li>
+          <li><a href="index.html#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- espaçamento entre menu e home -->
+  <div class="espaco-menu"> </div>
+
+  <!-- recursividade menu -->
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('nav ul');
+
+    menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
+
+  <div class="container reforco-escolar">
+  <h2>Biblioteca</h2>
+  <p>O principal objetivo do projeto é estimular o hábito da leitura, ajudando as crianças e adolescentes 
+    a descobrirem o prazer pela literatura desde cedo. Ao fomentar a leitura, o projeto busca também 
+    desenvolver a criatividade e a comunicação, capacitando os jovens a se expressarem melhor e a 
+    refletirem criticamente sobre o mundo ao seu redor. Além disso, a biblioteca serve como um suporte 
+    ao ensino formal, fornecendo ferramentas adicionais de aprendizado, fortalecendo a formação acadêmica e 
+    pessoal dos participantes, e preparando-os para os desafios educacionais e sociais futuros.</p>
+  </div>
+
+  <div class="container reforco-escolar-grid">
+    <div><img src="./imagens/biblioteca1.jpg"></div>
+    <div><img src="./imagens/biblioteca2.jpg"></div>
+    <div><img src="./imagens/biblioteca3.jpg"></div>
+  </div>
+  <div class="pag-secundaria">
+    <a href="index.html#form-projetos" class="botao-pag-secundaria">Inscreva-se</a>
+    <a href="index.html#doe" class="botao-pag-secundaria">Faça sua Doação</a>
+  </div>
+
+  <footer id="footer" class="fundo-branco footer">
+    <a href="https://www.instagram.com/institutoarvoredavida/" target="_blank"><img src="./imagens/instagram.jpg"></a>
+    <a href="mailto:institutoarvoredavida.edu@gmail.com" target="_blank"><img src="./imagens/email.png"></a>
+    <a href="https://maps.app.goo.gl/73rzstDsTsHuENDV7" target="_blank"><img src="./imagens/maps.png"></a>
+    <p><a target="_blank" href="https://github.com/anacristinags">Feito com carinho por Ana Cristina <span
+          class="coracao">❤</span></a></p>
+  </footer>
+    
+</body>
+
+</html>

@@ -1,0 +1,1128 @@
+:root{
+  --branco: white;
+  --preto: black;
+  --gap: 3rem;
+}
+
+/* tirando foramatação base do site */
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2rem;
+  line-height: 2rem;
+  width: 100%;
+}
+
+/* Estilizando texto */
+h1, h2, h3, h4, h5, h6{
+   font-family: "Montserrat", sans-serif;
+}
+
+h1{
+  font-size: 6rem;
+  text-transform: uppercase;
+}
+
+h2{
+  font-size: 5.5rem;
+}
+
+h3{
+  font-size: 5rem;
+}
+
+h4{
+  font-size: 4.5rem;
+}
+
+h5{
+  font-size: 4rem;
+}
+
+h6{
+  font-size: 3.5rem;
+}
+
+/* Cabeçalho */
+header {
+  background-color: var(--branco);
+  position: fixed;
+  top: 0; 
+  left: 0;
+  right: 0; 
+  width: 100%; /* garantindo os 100% do menu*/
+  border-bottom: 0.2rem solid #eeeeee; /* linhazinha do final*/
+  z-index: 1000; /**/
+}
+
+/* div dentro no menu */
+.container-menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem; /* Padding apenas nas laterais */
+  margin: 0 auto;
+}
+
+/* estizando menu */
+header ul{
+  list-style: none;
+  display: flex;
+}
+
+header ul li a {
+  text-decoration: none;
+  display: block;
+  color: black;
+  font-family: "Montserrat", sans-serif boldface;
+  font-size: 1.8rem;
+  padding: 2rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* efeitinho para o menu */
+.container-menu ul li a::after{
+  content: ''; 
+  position: absolute;
+  bottom: 1rem;
+  left: 22%;
+  width: 0%;
+  height: 0.2rem;
+  background: #80c8ff;
+  transition: all 300ml ease-in-out;
+}
+
+.container-menu ul li a:hover::after{
+  width: 60%;
+}
+
+.espaco-menu{
+  height: 8rem;
+}
+
+.Imagemlogo{
+  width: 40%; 
+  height: auto;
+}
+
+/* Escondendo o botão "hambúrguer" em telas maiores */
+.menu-toggle {
+  display: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container-menu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header ul {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    display: none;
+  }
+
+  header ul.active {
+    display: flex;
+  }
+
+  header ul li {
+    width: 100%;
+    text-align: left;
+  }
+
+  header ul li a {
+    padding: 1.5rem 2rem;
+  }
+
+  /* Exibindo o botão "hambúrguer" em telas menores */
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 3rem;
+    padding: 1.5rem;
+    background: none;
+    border: none;
+  }
+
+  .Imagemlogo {
+    width: 35%;
+  }
+}
+
+/* container basicos e gerais */
+.fundo-azul-marinho{
+  background-image: url(imagens/rgb.svg);
+  background-position: center center;
+  background-size: cover;
+  color: var(--branco);;
+}
+
+
+.fundo-azul{
+  background-color: #104c75;
+  background-size: cover;
+  background-position: center center;
+  color: var(--branco);;
+}
+
+.fundo-branco{
+  background-color: var(--branco);
+  background-size: cover;
+  background-position: center center;
+  color: var(--preto);
+}
+
+.fundo-azul-claro{
+  background-color: #aec4d5;
+  background-size: contain;
+  background-position: center center;
+  color: var(--branco);
+}
+
+/*
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--gap); 
+}
+*/
+
+.container {
+  width: 100%; /* O contêiner irá ocupar toda a largura disponível */
+  padding: var(--gap); /* Pequeno espaçamento nas laterais para estética */
+  box-sizing: border-box; /* Inclui o padding dentro da largura do contêiner */
+}
+
+.sessao{
+  min-height: 100vh; 
+}
+
+/* conteiner home */
+.container-inicial{
+  margin-top: -4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 5%; 
+  align-items: center;
+  overflow: hidden; /* Evita que qualquer conteúdo ultrapasse os limites do container */
+}
+
+.titulo-inicial, .img-inicial{
+  display: block;
+  margin-top: 10%;
+}
+
+.img-inicial img {
+  max-width: 100%; /* Garante que a imagem não ultrapasse a largura do container */
+  height: auto; /* Mantém a proporção da imagem */
+  object-fit: cover; /* Garante que a imagem se ajuste dentro do container */
+  display: block; /* Remove o espaço branco ao redor da imagem */
+  overflow: hidden; /* Certifica que a imagem não ultrapasse os limites */
+}
+
+.titulo-inicial h1{
+  font-size: 6rem;
+  margin-bottom: 2rem;
+  line-height: 5.5rem;
+}
+
+.titulo-inicial p{
+  text-align: justify;
+}
+
+.botoes {
+  margin-top: 3.5rem;
+  display: flex;
+  justify-content: center; 
+  gap: 20px; 
+}
+
+.botao {
+  padding: 10px 15px;
+  background-color: #ffffff;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.botao:hover {
+  background-color: #000000;
+  color: white;
+}
+
+/* Responsividade (telas menores) */
+@media (max-width: 768px) {
+  .container-inicial {
+    grid-template-columns: 1fr; /* Coloca o conteúdo em uma única coluna */
+    text-align: center;
+  }
+
+  .titulo-inicial h1 {
+    font-size: 4rem; /* Reduz o tamanho do texto */
+    line-height: 4.5rem;
+    margin-top: 6rem;
+  }
+
+  .titulo-inicial p {
+    margin: 2rem 0;
+  }
+
+  .botoes {
+    flex-direction: column; /* Botoes em formato de coluna */
+    gap: 15px; /* Reduz o espaço entre botões */
+  }
+
+  .img-inicial {
+    margin-top: 0;
+  }
+
+  .img-inicial img {
+    width: 100%; /* Aumenta a imagem para ocupar a largura completa */
+    object-fit: contain; /* Ajusta a imagem ao container sem cortar */
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-inicial h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+    margin-top: 7rem;
+  }
+
+  .botoes {
+    gap: 10px; /* Mais ajustes no espaçamento */
+  }
+
+  .botao {
+    font-size: 1.4rem; /* Ajusta o tamanho do texto dos botões */
+  }
+}
+
+
+/* container de projetos */
+.container-texto-projetos{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.container-texto-projetos h2{
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.container-texto-projetos p{
+  margin-top: 3rem;
+  text-align: justify;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+.grid-projeto{
+  display: grid;
+   /* grid-template-columns: repeat(3, 1fr); */
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); Ajusta para caber o máximo de projetos conforme a tela */
+  grid-template-columns: repeat(3, 1fr); /* Em telas maiores, 3 colunas */
+  gap: var(--gap);
+}
+
+.img-projetos{
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.img-projetos img {
+  width: 100%;
+  height: auto; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.img-projetos:hover img {
+  transform: scale(1.05); /* Aumenta a imagem em 5% */
+}
+
+.img-projetos p{
+  margin-bottom: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .grid-projeto {
+    grid-template-columns: repeat(2, 1fr); /* Em telas menores, 2 colunas */
+  }
+
+  .container-texto-projetos h2{
+    margin-top: 5rem;
+    text-align: center;
+    line-height: 5rem;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .grid-projeto {
+    grid-template-columns: 1fr; /* Ajusta para uma única coluna em telas pequenas */
+  }
+
+  .container-texto-projetos h2{
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+}
+
+/* FORMULARIO */
+.projeto-form{
+  grid-column: span 2;
+  margin-bottom: 50px;
+}
+
+.projeto-form .form-grid{
+  border: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  padding: var(--gap);
+}
+
+.form-grupo{
+  flex: 1 1 320px;
+}
+
+.form-grupo label{
+  display: block;
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.form-grupo input, .form-grupo textarea{
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  padding: 1.5rem 2rem;
+  width: 75%;
+  flex: 1 1 100%;
+  background:  #eeeeee;
+}
+
+.espaco-form{
+  margin-bottom: 1.5rem;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+  line-height: 3rem;
+}
+
+.form-grupo button{
+  padding: 10px;
+  background-color: var(--branco);
+  border: none;
+  border-radius: 5px;
+  font-size: 2rem;
+  margin-left: 45%;
+  transition: background-color 0.3s;
+}
+
+.form-grupo button:hover{
+  background-color: #273e72;
+  color: var(--branco);
+}
+
+
+/* CONTAINER DE DOAÇÃO */
+.container-texto-doacao{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+/* titulo e texto*/
+.container-texto-doacao h2{
+  margin-top: 5rem;
+  text-align: center;
+  line-height: 5rem;
+}
+
+.container-texto-doacao p{
+  margin-top: 3rem;
+  text-align: justify;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+.grid-doe{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap);
+}
+
+/* class div*/
+.pix{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.doe-itens {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.banco {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* img do pix */
+.pix img{
+  width: 100%;
+  max-width: 30rem;
+  max-height: 30rem;
+  margin-bottom: 0%;
+}
+
+/* configs do texto */
+.pix p{
+  margin-bottom: 1rem;
+  text-align: left;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+.doe-itens p{
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  text-align: left;
+  font-size: 2.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* configirações da lista */
+.doe-itens ul, .banco ul {
+  list-style-type: none; /* Remove marcadores */
+}
+
+.doe-itens li, .banco li {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  text-align: left;
+}
+
+/* configurações do titulo */
+.banco h3, .pix h3, .doe-itens h3{
+  font-size: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  text-align: left;
+  line-height: 3rem;
+}
+
+@media (max-width: 768px) {
+  .grid-doe {
+    grid-template-columns: 1fr; /* Em ecrãs menores, exibir em uma coluna */
+  }
+
+  .container-texto-doacao h2{
+    margin-top: 5rem;
+    text-align: center;
+    font-size: 5rem;
+    line-height: 5.5rem;
+  }
+
+  .doe-itens {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+}
+
+/* VOLUNTARIANDO */
+.titulo-voluntariando{
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.titulo-voluntariando h2{
+  margin-top: 5%;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.container-voluntariando{
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+   /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+  gap: var(--gap);  
+}
+
+.texto-voluntariando h3{
+  font-size: 3rem;
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.texto-voluntariando p{
+  font-size: 2rem;
+  text-align: justify;
+  line-height: 1.5rem;
+}
+
+.texto-voluntariando h4{
+  font-size: 2.5rem;
+  text-align: left;
+  margin-top: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.texto-voluntariando li{
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-align: justify;
+}
+
+.texto-voluntariando h5{
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  line-height: 4rem;
+  text-align: left;
+}
+
+.formulario-base .fildset-formulario{
+  border: none;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+}
+
+.componente-formulario label{
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+.componente-formulario input, textarea{
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  width: 90%;
+  height: auto;
+  background:  #eeeeee;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.componente-formulario button{
+  padding: 10px;
+  background-color: var(--branco);
+  border: none;
+  border-radius: 5px;
+  font-size: 2rem;
+  margin-left: 0;
+  margin-top: 2rem;
+  transition: background-color 0.3s;
+}
+
+.componente-formulario button:hover{
+  background-color: #273e72;
+  color: var(--branco);
+}
+
+.componente-escolha-form-evento{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+.componente-escolha-form-evento label{
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+.img-voluntario{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.img-voluntario img{
+  width: 80%;
+  height: auto;
+  margin: 2rem;
+}
+
+
+/* Responsividade para telas médias */
+@media (max-width: 1024px) {
+  .container-voluntariando {
+    grid-template-columns: 1fr; /* Muda para uma coluna */
+  }
+
+  .texto-voluntariando h3 {
+    font-size: 3rem; /* Reduz o tamanho do texto */
+    line-height: 5rem;
+  }
+
+  .texto-voluntariando p, li {
+    font-size: 2rem; /* Reduz o tamanho do texto */
+  }
+
+  .texto-voluntariando h4, h5 {
+    font-size: 2.5rem; /* Reduz o tamanho do texto */
+  }
+
+  .componente-formulario input, textarea {
+    font-size: 1.8rem; /* Ajusta o tamanho da fonte */
+  }
+
+  .componente-formulario button {
+    font-size: 1.5rem; /* Ajusta o tamanho do botão */
+  }
+
+  .img-voluntario img {
+    width: 100%; /* Imagens ocupam 100% da largura */
+    margin: 1rem 0; /* Margem vertical ajustada */
+  }
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+  .titulo-voluntariando h2 {
+    margin-top: 2rem;
+    font-size: 3rem; 
+    line-height: 3rem;
+  }
+
+  .texto-voluntariando h3 {
+    margin-top: 1rem;
+    font-size: 2.5rem; 
+  }
+
+  .texto-voluntariando p, li {
+    font-size: 1.8rem; 
+  }
+
+  .texto-voluntariando h4, h5 {
+    font-size: 2.2rem; 
+  }
+
+  .componente-formulario input, textarea {
+    font-size: 1.5rem; 
+  }
+
+  .componente-formulario button {
+    font-size: 2rem; 
+    padding: 8px; 
+  }
+
+  .img-voluntario img {
+    width: 100%; 
+    margin: 1rem 0; 
+  }
+}
+
+/* EVENTOS */
+.titulo-eventos{
+  display: flex;
+  height: 250px;
+  width: 100%;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.subtitulo-eventos{
+  margin-top: 0rem;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  text-align: justify;
+  font-family: "Montserrat", sans-serif;
+}
+
+.eventos{
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 0px; /* determina o espaço entre as colunas */
+}
+
+.eventos-img{
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.eventos-img img{
+  width: 40%;
+  height: auto;
+}
+
+.eventos-texto{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-bottom: 0.2rem solid #eeeeee; /* linhazinha do final*/
+}
+
+.eventos-texto h4{
+  font-size: 2.5rem;
+  line-height: 3rem;
+  text-align: justify;
+  font-family: "Montserrat", sans-serif;
+}
+
+.eventos-texto p{
+  font-size: 2rem;
+  line-height: 2rem;
+  text-align: justify;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Responsividade para tablets (largura máxima de 768px) */
+@media (max-width: 768px) {
+  .eventos {
+    grid-template-columns: 1fr; /* Faz com que os elementos fiquem um abaixo do outro */
+  }
+
+  .eventos-img img {
+    width: 60%; /* Ajuste o tamanho da imagem para telas menores */
+  }
+
+  .eventos-texto h4 {
+    font-size: 2.2rem;
+    line-height: 4rem;
+  }
+
+  .eventos-texto p {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+
+  .titulo-eventos h2{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-size: 5rem;
+    line-height: 6rem;
+  }
+
+}
+
+/* Responsividade para telemóveis (largura máxima de 480px) */
+@media (max-width: 480px) {
+  .titulo-eventos {
+    flex-direction: column;
+    height: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    line-height: 4rem;
+  }
+
+  .titulo-eventos h2{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+
+  .subtitulo-eventos {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .eventos-img img {
+    width: 80%; /* Ajuste maior para imagens em telemóveis */
+  }
+
+  .eventos-texto h4 {
+    font-size: 2rem;
+    line-height: 4rem;
+  }
+
+  .eventos-texto p {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  .eventos {
+    gap: 1rem; /* Aumenta o espaço entre os blocos de eventos */
+  }
+
+  .container {
+    padding: 1rem;
+  }
+}
+
+/* SOBRE NÓS */
+.sobre-nos h3{
+  text-align: center;
+  margin-top: 6rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.sobre-nos h4{
+  font-size: 2.5rem;
+  line-height: 3rem;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+  margin-bottom: 1rem;
+  margin-top: 4rem;
+}
+
+.sobre-nos p{
+  font-size: 2rem;
+  line-height: 2rem;
+  font-family: "Montserrat", sans-serif;
+  text-align: justify;
+}
+
+.sobre-nos ul li{
+  line-height: 3rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.sobre-nos-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.sobre-nos-grid img{
+  width: 100%;
+  height: auto;
+}
+
+/* CONTATO */
+.contato p{
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.contato h3{
+  text-align: center;
+  margin-top: 6rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.contato-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+  margin-bottom: 6rem;
+  
+}
+
+.contato-texto h4{
+  font-size: 2rem;
+  line-height: 3rem;
+  text-align: left;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.contato-texto a{
+  text-decoration: none;
+  color: #a8009a;
+  margin-bottom: 3rem;
+  object-fit: cover; /* Garante que a imagem se ajuste dentro do container */
+  display: block; /* Remove o espaço branco ao redor da imagem */
+  overflow: hidden; /* Certifica que a imagem não ultrapasse os limites */
+}
+
+.endereco-maps{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 50%;
+}
+
+/* RESPOSIVIDADE PARA CONTATO */
+@media screen and (max-width: 768px) {
+  .contato h3 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+
+  .contato-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* CONFIGURAÇÃO FOOTER */
+.footer{
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+.footer a img{
+  gap: var(--gap);
+  padding-inline: var(--gap);
+}
+
+.footer p{
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  color: #292929;
+  font-size: 1.5rem;
+}
+
+.footer a{
+  text-decoration: none;
+}
+
+.coracao{
+  color: #c12f2f;
+}
+
+
+/* configurações para as paginas secundarias*/
+.reforco-escolar h2{
+  font-size: 5rem;
+  line-height: 3rem;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.reforco-escolar p{
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-family: "Montserrat", sans-serif;
+  text-align: justify;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.reforco-escolar-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap);
+}
+
+.reforco-escolar-grid img{
+  width: 100%;
+  height: auto;
+}
+
+.pag-secundaria{
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  gap: var(--gap);
+}
+
+.botao-pag-secundaria{
+  padding: 10px 15px;
+  background-color: #104c75;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.botao-pag-secundaria:hover{
+  background-color: #000000;
+  color: white;
+}
+
+/* Responsividade para telas médias */
+@media (max-width: 768px) {
+  .reforco-escolar h2 {
+    margin-top: 7rem;
+    font-size: 4rem;
+    line-height: 3.5rem;
+    text-align: center;
+  }
+
+  .reforco-escolar p {
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+  }
+
+  .reforco-escolar-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas em tablets */
+  }
+
+  .pag-secundaria {
+    flex-direction: column; /* Botões um abaixo do outro */
+    gap: 1rem;
+  }
+}
+
+/* Responsividade celulares */
+@media (max-width: 480px) {
+  .reforco-escolar h2 {
+    margin-top: 7rem;
+    font-size: 3rem;
+    line-height: 3rem;
+    text-align: center;
+  }
+
+  .reforco-escolar p {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  .reforco-escolar-grid {
+    grid-template-columns: 1fr; /* 1 coluna em telemóveis */
+    gap: 1rem; /* Ajusta o espaçamento entre as imagens */
+  }
+
+  .pag-secundaria {
+    flex-direction: column; /* Botões empilhados verticalmente */
+    gap: 1rem; /* Espaçamento entre os botões */
+  }
+
+  .botao-pag-secundaria {
+    width: 100%; /* Botões ocupando a largura total */
+    text-align: center;
+  }
+}
